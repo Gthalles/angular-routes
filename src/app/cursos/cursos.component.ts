@@ -31,7 +31,11 @@ export class CursosComponent implements OnInit {
   }
 
   nextPage() {
-    this.router.navigate(['/cursos'], {queryParams: {'pagina': ++this.pagina}});
+    this.router.navigate(['/cursos'], {queryParams: {'pagina': this.pagina++}});
+  }
+
+  prevPage() {
+    this.router.navigate(['/cursos'], {queryParams: {'pagina': this.pagina--}});
   }
 
 }

@@ -9,7 +9,32 @@ footer {
   margin-left: 10%;
 }
 
+.section {
+  border: solid 1px #ee6e73;
+  padding: 25px;
+}
+
 router-outlet {
   width: 50%;
 }
 
+.collection-item {
+  font-size: 20px;
+  padding-top: 15px;
+}
+
+.flex-collection {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.next-prev-button {
+  background-color: #ee6e73;
+  color: #ffffff;
+  border: solid 1px #ffffff;
+  font-size: 30px;
+  font-weight: 900;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 5px 10px;
+}
