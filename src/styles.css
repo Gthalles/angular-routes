@@ -2,3 +2,14 @@
 footer {
   margin-top: 500px;
 }
+
+.container {
+  margin-top: 150px;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+router-outlet {
+  width: 50%;
+}
+
