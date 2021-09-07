@@ -32,9 +32,9 @@ router-outlet {
   background-color: #ee6e73;
   color: #ffffff;
   border: solid 1px #ffffff;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 900;
   border-radius: 10px;
   display: inline-block;
-  padding: 5px 10px;
+  padding: 2px 8px;
 }
