@@ -19,7 +19,7 @@ const alunosRoutes: Routes = [
     ],
     exports: [
         RouterModule
-     ]
+    ]
 })
 
 

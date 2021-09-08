@@ -5,7 +5,7 @@
       <a data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li routerLinkActive="active"><a routerLink="cursos" [queryParams]="{pagina:1}">Cursos</a></li>
-        <li routerLinkActive="active"><a [routerLink]="['curso', idCurso.value]">Detalhes</a></li>
+        <!--<li routerLinkActive="active"><a [routerLink]="['curso', idCurso.value]">Detalhes</a></li>-->
         <li routerLinkActive="active"><a routerLink="alunos">Alunos</a></li>
         <li routerLinkActive="active"><a routerLink="login">Login</a></li>
       </ul>
@@ -14,8 +14,8 @@
 </header>
 
 <div class="container">
-  <p>Digite o id do curso desejado:</p>
-  <input type="text" #idCurso>
+  <!--<p>Digite o id do curso desejado:</p>
+  <input type="text" #idCurso>-->
   <br>
   <br>
   <router-outlet></router-outlet>

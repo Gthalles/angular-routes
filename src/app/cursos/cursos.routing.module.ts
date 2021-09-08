@@ -9,7 +9,7 @@ const cursosRoutes: Routes = [
     { path: 'cursos', component: CursosComponent},
     { path: 'curso/:id', component: CursoDetalheComponent },
     { path: 'nao-encontrado', component: CursoNotFoundComponent }
-];
+]
 
 @NgModule({
   imports: [
