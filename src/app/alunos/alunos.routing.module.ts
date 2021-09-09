@@ -6,11 +6,13 @@ import { AlunosFormComponent } from './alunos-form/alunos-form.component';
 import { AlunoDetalheComponent } from './aluno-detalhe/aluno-detalhe.component';
 
 const alunosRoutes: Routes = [
-    {path: 'alunos', component: AlunosComponent, children: [
-        {path: 'new', component: AlunosFormComponent},
-        {path: ':id', component: AlunoDetalheComponent},
-        {path: ':id/edit', component: AlunosFormComponent}
-    ]}
+    {
+        path: '', component: AlunosComponent, children: [
+            { path: 'new', component: AlunosFormComponent },
+            { path: ':id', component: AlunoDetalheComponent },
+            { path: ':id/edit', component: AlunosFormComponent }
+        ]
+    }
 ];
 
 @NgModule({
@@ -24,5 +26,5 @@ const alunosRoutes: Routes = [
 
 
 export class AlunosRoutingModule {
-     
+
 }

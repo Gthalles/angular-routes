@@ -1,7 +1,7 @@
 <div class="section">
     <h5>Lista de Cursos</h5>
     <div class="collection">
-        <a class="collection-item center" *ngFor="let curso of cursos" [routerLink]="['/curso', curso.id]">
+        <a class="collection-item center" *ngFor="let curso of cursos" [routerLink]="['/cursos', curso.id]">
             {{ curso.name }}
         </a>
     </div>

@@ -5,8 +5,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app.routing.module';
-import { CursosModule } from './cursos/cursos.module';
-import { AlunosModule } from './alunos/alunos.module';
+//import { AlunosModule } from './alunos/alunos.module';
 import { AlunosRoutingModule } from './alunos/alunos.routing.module';
 
 @NgModule({
@@ -17,10 +16,9 @@ import { AlunosRoutingModule } from './alunos/alunos.routing.module';
   ],
   imports: [
     BrowserModule,
-    CursosModule,
     AppRoutingModule,
     AlunosRoutingModule,
-    AlunosModule
+    //AlunosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
