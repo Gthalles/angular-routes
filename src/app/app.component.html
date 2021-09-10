@@ -1,5 +1,4 @@
-<header>
-  <nav>
+  <nav *ngIf="showMenu">
     <div class="nav-wrapper">
       <a routerLink="" class="brand-logo">Rotas em Angular</a>
       <a data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -10,8 +9,7 @@
         <li routerLinkActive="active"><a routerLink="login">Login</a></li>
       </ul>
     </div>
-  </nav>
-</header>
+  </nav>y
 
 <div class="container">
   <!--<p>Digite o id do curso desejado:</p>
