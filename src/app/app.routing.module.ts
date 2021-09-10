@@ -5,14 +5,32 @@ import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from "./login/login.component";
 import { CursoDetalheComponent } from "./cursos/curso-detalhe/curso-detalhe.component";
 import { CursoNotFoundComponent } from "./cursos/curso-not-found/curso-not-found.component";
+import { AuthGuard } from './guard/auth.guard';
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
+  {
+    path: 'cursos',
+    loadChildren: () => import('./cursos/cursos.module').then(m => m.CursosModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'alunos',
+    loadChildren: () => import('./alunos/alunos.module').then(m => m.AlunosModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: '', component: HomeComponent,
+    canActivate: [AuthGuard]
+  },
   { path: 'login', component: LoginComponent },
-  { path: 'cursos', loadChildren: () => import('./cursos/cursos.module').then(m => m.CursosModule) },
-  { path: 'alunos', loadChildren: () => import('./alunos/alunos.module').then(m => m.AlunosModule) },
-  { path: 'curso/:id', component: CursoDetalheComponent },
-  { path: 'nao-encontrado', component: CursoNotFoundComponent }
+  {
+    path: 'curso/:id', component: CursoDetalheComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'nao-encontrado', component: CursoNotFoundComponent,
+    canActivate: [AuthGuard]
+  }
 ];
 
 @NgModule({

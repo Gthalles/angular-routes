@@ -33,6 +33,10 @@ export class AuthenticationService {
     }
   }
 
+  userIsAuthenticated() {
+    return this.authenticated;
+  }
+
   constructor(private router: Router) { }
 
 }
