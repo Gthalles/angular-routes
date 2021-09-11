@@ -24,7 +24,10 @@ import { CursosGuard } from './guard/cursos.guard';
     AlunosRoutingModule,
     //AlunosModule
   ],
-  providers: [AuthenticationService, CursosGuard],
+  providers: [
+    AuthenticationService,
+    CursosGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

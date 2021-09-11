@@ -13,6 +13,20 @@ export class AlunosFormComponent implements OnInit {
 
   inscricao: Subscription | undefined;
   aluno: any = {};
+  private formChanged: boolean = false;
+
+  onInput() {
+    this.formChanged = true;
+    console.log('change on input');
+  }
+
+  canChangeRoute() {
+    if(this.formChanged) {
+      confirm('Deseja mesmo sair dessa página?');
+    }
+
+    return true;
+  }
 
   constructor(
     private route: ActivatedRoute,

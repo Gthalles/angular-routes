@@ -10,13 +10,13 @@
     <div class="row">
         <div class="class-field col s12">
             <label for="name" class="active">Nome</label>
-            <input id="name" [(ngModel)]="aluno.name" type="text" class="validade">
+            <input id="name" [(ngModel)]="aluno.name" type="text" class="validade" (input)="onInput()">
         </div>
     </div>
     <div class="row">
         <div class="class-field col s12">
             <label for="email" class="active">Email</label>
-            <input id="email" [(ngModel)]="aluno.email" type="email" class="validade">
+            <input id="email" [(ngModel)]="aluno.email" type="email" class="validade" (input)="onInput()">
         </div>
     </div>
 </div>
