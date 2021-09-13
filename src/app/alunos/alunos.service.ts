@@ -1,36 +1,27 @@
 import { Injectable } from '@angular/core';
+import { Aluno } from './aluno.model';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class AlunosService {
-  private alunos: any[] = [
-    {
-      id: 1,
-      name: 'Tobias',
-      email: 'tobias@hotmail.com'
-    },
-    {
-      id: 2,
-      name: 'Leonéia',
-      email: 'Ldgc@bol.gov'
-    },
-    {
-      id: 3,
-      name: 'Debora',
-      email: 'Debora@outlook.com.br'
-    }
+  alunos: Aluno[] = [
+    new Aluno(0, 'thalles', 'thalles@gempe.dev'),
+    new Aluno(1, 'gêremias', 'geremias@bol.com.br'),
+    new Aluno(2, 'Lisa', 'lisa@outlook.com'),
+    new Aluno(3, 'Marival', 'marival@gmail.com')
   ];
 
   getAlunos() {
+    console.log(this.alunos);
     return this.alunos;
   }
 
   getAluno(id: number) {
-    for(let i = 0; i < this.alunos.length; i++) {
+    for (let i = 0; i < this.alunos.length; i++) {
       let aluno = this.alunos[i];
-      if(aluno.id == id) {
+      if (aluno.id == id) {
         return aluno;
       }
     }

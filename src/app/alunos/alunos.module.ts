@@ -9,6 +9,7 @@ import { AlunosService } from './alunos.service';
 import { FormsModule } from '@angular/forms';
 import { AlunosGuard } from './alunos.guard';
 import { AlunosDeactivateGuard } from './alunos-deactivate.guard';
+import { AlunoDetalheResolver } from '../guard/aluno-detalhe.resolver';
 
 
 
@@ -26,7 +27,8 @@ import { AlunosDeactivateGuard } from './alunos-deactivate.guard';
   providers: [
     AlunosService,
     AlunosGuard,
-    AlunosDeactivateGuard
+    AlunosDeactivateGuard,
+    AlunoDetalheResolver
   ]
 })
 export class AlunosModule { }
