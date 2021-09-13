@@ -6,14 +6,12 @@ import { LoginComponent } from "./login/login.component";
 import { CursoDetalheComponent } from "./cursos/curso-detalhe/curso-detalhe.component";
 import { CursoNotFoundComponent } from "./cursos/curso-not-found/curso-not-found.component";
 import { AuthGuard } from './guard/auth.guard';
-import { CursosGuard } from './guard/cursos.guard';
 
 const appRoutes: Routes = [
   {
     path: 'cursos',
     loadChildren: () => import('./cursos/cursos.module').then(m => m.CursosModule),
-    canActivate: [AuthGuard],
-    canActivateChild: [CursosGuard]
+    canActivate: [AuthGuard]
   },
   {
     path: 'alunos',
@@ -27,7 +25,6 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   {
     path: 'curso/:id', component: CursoDetalheComponent,
-    canActivateChild: [CursosGuard],
     canActivate: [AuthGuard]
   },
   {

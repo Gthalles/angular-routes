@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanDeactivate, RouterStateSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
-import { Deactivate } from '../guard/deactivate.interface';
+import { Deactivate } from './deactivate.interface';
 
 @Injectable()
 export class AlunosDeactivateGuard implements CanDeactivate<Deactivate> {
@@ -12,9 +12,9 @@ export class AlunosDeactivateGuard implements CanDeactivate<Deactivate> {
     state: RouterStateSnapshot
   ): Observable<boolean> | Promise<boolean> | boolean {
 
-    console.log('Deactivate guard its okay');
-    
+    console.log('Guarda de Desativação de rota');
     return component.canChangeRoute();
-
   }
+
+
 }

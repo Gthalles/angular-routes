@@ -7,9 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { AuthenticationService } from './login/authentication.service';
 import { AppRoutingModule } from './app.routing.module';
-//import { AlunosModule } from './alunos/alunos.module';
 import { AlunosRoutingModule } from './alunos/alunos.routing.module';
-import { CursosGuard } from './guard/cursos.guard';
 
 @NgModule({
   declarations: [
@@ -22,11 +20,9 @@ import { CursosGuard } from './guard/cursos.guard';
     FormsModule,
     AppRoutingModule,
     AlunosRoutingModule,
-    //AlunosModule
   ],
   providers: [
     AuthenticationService,
-    CursosGuard
   ],
   bootstrap: [AppComponent]
 })
