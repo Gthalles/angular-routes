@@ -8,6 +8,7 @@ import { CursosService } from './cursos.service';
 import { CursosRoutingModule } from './cursos.routing.module';
 import { CursosGuard } from '../guard/cursos.guard';
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -18,12 +19,9 @@ import { CursosGuard } from '../guard/cursos.guard';
     CursoDetalheComponent,
     CursoNotFoundComponent
   ],
-  exports: [
-
-  ],
   providers: [
-    CursosService,
-    CursosGuard
+    CursosService
   ]
 })
+
 export class CursosModule { }

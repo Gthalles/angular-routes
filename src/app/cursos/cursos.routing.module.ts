@@ -1,21 +1,15 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from "@angular/router";
+import { RouterModule, Routes } from '@angular/router';
 
-import { CursosComponent } from "./cursos.component";
-import { CursoDetalheComponent } from "./curso-detalhe/curso-detalhe.component";
-import { CursoNotFoundComponent } from "./curso-not-found/curso-not-found.component";
-import { CursosGuard } from '../guard/cursos.guard';
+import { CursosComponent } from './cursos.component';
+import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
+import { CursoNotFoundComponent } from './curso-not-found/curso-not-found.component';
 
 const cursosRoutes: Routes = [
   {
     path: '',
     component: CursosComponent,
-    canActivateChild: [CursosGuard],
     children: [
-      {
-        path: '',
-        component: CursosComponent
-      },
       {
         path: 'nao-encontrado',
         component: CursoNotFoundComponent
@@ -36,4 +30,5 @@ const cursosRoutes: Routes = [
     RouterModule
   ]
 })
+
 export class CursosRoutingModule { }

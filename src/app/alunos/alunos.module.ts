@@ -12,7 +12,6 @@ import { AlunosDeactivateGuard } from '../guard/alunos-deactivate.guard';
 import { AlunoDetalheResolver } from '../guard/aluno-detalhe.resolver';
 
 
-
 @NgModule({
   declarations: [
     AlunosComponent,
@@ -31,4 +30,5 @@ import { AlunoDetalheResolver } from '../guard/aluno-detalhe.resolver';
     AlunoDetalheResolver
   ]
 })
+
 export class AlunosModule { }
