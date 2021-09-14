@@ -6,30 +6,42 @@ import { LoginComponent } from "./login/login.component";
 import { CursoDetalheComponent } from "./cursos/curso-detalhe/curso-detalhe.component";
 import { CursoNotFoundComponent } from "./cursos/curso-not-found/curso-not-found.component";
 import { AuthGuard } from './guard/auth.guard';
+import { CursosGuard } from './guard/cursos.guard';
 
 const appRoutes: Routes = [
   {
     path: 'cursos',
     loadChildren: () => import('./cursos/cursos.module').then(m => m.CursosModule),
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
+    canActivateChild: [CursosGuard],
+    canLoad: [AuthGuard]
   },
   {
     path: 'alunos',
     loadChildren: () => import('./alunos/alunos.module').then(m => m.AlunosModule),
+    canActivate: [AuthGuard],
+    canLoad: [AuthGuard]
+  },
+  {
+    path: '',
+    component: HomeComponent,
     canActivate: [AuthGuard]
   },
   {
-    path: '', component: HomeComponent,
-    canActivate: [AuthGuard]
-  },
-  { path: 'login', component: LoginComponent },
-  {
-    path: 'curso/:id', component: CursoDetalheComponent,
-    canActivate: [AuthGuard]
+    path: 'login',
+    component: LoginComponent
   },
   {
-    path: 'nao-encontrado', component: CursoNotFoundComponent,
-    canActivate: [AuthGuard]
+    path: 'curso/:id',
+    component: CursoDetalheComponent,
+    canActivate: [AuthGuard],
+    canActivateChild: [CursosGuard]
+  },
+  {
+    path: 'nao-encontrado',
+    component: CursoNotFoundComponent,
+    canActivate: [AuthGuard],
+    canActivateChild: [CursosGuard]
   }
 ];
 
@@ -41,6 +53,5 @@ const appRoutes: Routes = [
     RouterModule
   ]
 })
-export class AppRoutingModule {
 
-}
+export class AppRoutingModule { }

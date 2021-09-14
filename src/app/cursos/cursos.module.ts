@@ -6,7 +6,6 @@ import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
 import { CursoNotFoundComponent } from './curso-not-found/curso-not-found.component';
 import { CursosService } from './cursos.service';
 import { CursosRoutingModule } from './cursos.routing.module';
-import { CursosGuard } from '../guard/cursos.guard';
 
 
 @NgModule({

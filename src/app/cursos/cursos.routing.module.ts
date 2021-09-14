@@ -8,17 +8,15 @@ import { CursoNotFoundComponent } from './curso-not-found/curso-not-found.compon
 const cursosRoutes: Routes = [
   {
     path: '',
-    component: CursosComponent,
-    children: [
-      {
-        path: 'nao-encontrado',
-        component: CursoNotFoundComponent
-      },
-      {
-        path: ':id',
-        component: CursoDetalheComponent
-      }
-    ]
+    component: CursosComponent
+  },
+  {
+    path: 'nao-encontrado',
+    component: CursoNotFoundComponent
+  },
+  {
+    path: ':id',
+    component: CursoDetalheComponent
   }
 ];
 

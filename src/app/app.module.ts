@@ -8,6 +8,8 @@ import { LoginComponent } from './login/login.component';
 import { AuthenticationService } from './login/authentication.service';
 import { AppRoutingModule } from './app.routing.module';
 import { AlunosRoutingModule } from './alunos/alunos.routing.module';
+import { AuthGuard } from './guard/auth.guard';
+import { CursosGuard } from './guard/cursos.guard';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { AlunosRoutingModule } from './alunos/alunos.routing.module';
   ],
   providers: [
     AuthenticationService,
+    AuthGuard,
+    CursosGuard
   ],
   bootstrap: [AppComponent]
 })
