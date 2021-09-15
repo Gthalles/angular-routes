@@ -10,12 +10,14 @@ import { AppRoutingModule } from './app.routing.module';
 import { AlunosRoutingModule } from './alunos/alunos.routing.module';
 import { AuthGuard } from './guard/auth.guard';
 import { CursosGuard } from './guard/cursos.guard';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,7 @@ import { CursoDetalheComponent } from "./cursos/curso-detalhe/curso-detalhe.comp
 import { CursoNotFoundComponent } from "./cursos/curso-not-found/curso-not-found.component";
 import { AuthGuard } from './guard/auth.guard';
 import { CursosGuard } from './guard/cursos.guard';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const appRoutes: Routes = [
   {
@@ -23,11 +24,6 @@ const appRoutes: Routes = [
     canLoad: [AuthGuard]
   },
   {
-    path: '',
-    component: HomeComponent,
-    canActivate: [AuthGuard]
-  },
-  {
     path: 'login',
     component: LoginComponent
   },
@@ -42,6 +38,20 @@ const appRoutes: Routes = [
     component: CursoNotFoundComponent,
     canActivate: [AuthGuard],
     canActivateChild: [CursosGuard]
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
   }
 ];
 
